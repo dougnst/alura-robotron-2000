@@ -131,7 +131,7 @@ main {
     border-color: var(--main-cinza);
 }
 
-.producao {
+.producao, .botao-cor {
     margin-top: 1em;
     font-size: 2em;
     text-transform: uppercase;
@@ -143,9 +143,16 @@ main {
     cursor: pointer;
 }
 
-.producao:hover {
+.producao:hover, .botao-cor:hover {
     background: var(--main-preto);
-    color: var(--main-branco)
+    color: var(--main-branco);
+}
+
+.botao-cor {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--main-preto);
+    white-space: nowrap;
 }
 
 
