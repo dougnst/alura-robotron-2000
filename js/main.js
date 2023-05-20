@@ -55,6 +55,20 @@ const pecas = {
     }
 }
 
+const imagem = document.querySelector("[data-cor-imagem");
+const botaoImagem = document.querySelector("[data-cor-botao");
+
+const cores = {
+    vermelho: "img/robotron-vermelho.png",
+    amarelo: "img/robotron-amarelo.png",
+    azul: "img/robotron-azul.png",
+    branco: "img/robotron-branco.png",
+    preto: "img/robotron-preto.png",
+    rosa: "img/robotron-rosa.png"
+};
+
+botaoImagem.addEventListener("click", (evento) => {trocarImagem();});
+
 controle.forEach( (elemento) => {
     elemento.addEventListener("click", (evento) => {
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
@@ -62,7 +76,25 @@ controle.forEach( (elemento) => {
     })
 })
 
+function trocarImagem () {
 
+    const corAtual = document.querySelector("[data-cor-imagem").getAttribute("src");
+    
+    if (corAtual === "img/robotron-vermelho.png") {
+        imagem.setAttribute("src", "img/robotron-amarelo.png");
+    } if (corAtual === "img/robotron-amarelo.png") {
+        imagem.setAttribute("src", "img/robotron-azul.png");
+    } if (corAtual === "img/robotron-azul.png") {
+        imagem.setAttribute("src", "img/robotron-rosa.png");
+    } if (corAtual === "img/robotron-rosa.png") {
+        imagem.setAttribute("src", "img/robotron-branco.png");
+    } if (corAtual === "img/robotron-branco.png") {
+        imagem.setAttribute("src", "img/robotron-preto.png");
+    } if (corAtual === "img/robotron-preto.png") {
+        imagem.setAttribute("src", "img/robotron-vermelho.png");
+    }
+
+}
 
 function manipulaDados (operacao, controle) {
 

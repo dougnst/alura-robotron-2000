@@ -149,7 +149,6 @@ main {
 }
 
 
-
 /****************************** Estatísticas *****/
 .estatisticas {
     flex-basis: 23%;
@@ -207,6 +206,12 @@ main {
     order: 1;
     flex-basis: 35%;
     margin: 10px 0 0;
+}
+
+.box-botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
 }
 
 @media screen and (max-width: 1600px) {
